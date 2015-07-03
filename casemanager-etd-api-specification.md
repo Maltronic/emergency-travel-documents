@@ -107,7 +107,7 @@ To push the ETD application details, the API call is as follows:
 	       		"other" : ""
 	       },
 	       "passportDetails" : {
-	       		"passwordIssuedInUK" : "y",
+	       		"passportIssuedInUK" : "y",
 	       		"countryOfIssue" : "",
 	       		"cityOfIssue" : "", 	
 	       		"docNumber" : "",
@@ -267,9 +267,9 @@ To push the ETD application details, the API call is as follows:
 
 |Field name|Description|Format|Mandation|Maximum length|
 |-------------|-------------|-------------|-------------|-------------|
-|passwordIssuedInUK|Was the Passport issued in the UK?|Boolean ['y','n']|required|1|
-|countryOfIssue|Country of issue|Text|optional (required if 'passwordIssuedInUK' == 'n')|<b>TBD</b>|
-|cityOfIssue|City of issue|Text|optional (required if 'passwordIssuedInUK' == 'n')|<b>TBD</b>|
+|passportIssuedInUK|Was the Passport issued in the UK?|Boolean ['y','n']|required|1|
+|countryOfIssue|Country of issue|Text|optional (required if 'passportIssuedInUK' == 'n')|<b>TBD</b>|
+|cityOfIssue|City of issue|Text|optional (required if 'passportIssuedInUK' == 'n')|<b>TBD</b>|
 |docNumber|Passport document number|Passport Regex|optional|Passport Regex|
 |dateOfIssue|Date of issue|Date ('yyyy-mm-dd')|optional|10|
 |nationality|Nationality|Text|optional|<b>TBD</b>|
