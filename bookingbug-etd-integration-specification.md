@@ -34,7 +34,7 @@ As part of the ETD application process, the option to book an appointment with t
 
 BookingBug offer a set of UI widgets and API to perform the integration with their booking system. BookingBug will be responsible for the development of the ETD "Book your appointment" screen so an integration work needs to be carried out to "inject" this step/screen into the ETD application flow seamlessly. 
 
-Main work here is to define both the **input fields** to be sent to BookingBug when calling the appointment screen and **the callback and the response parameters** from BookingBug that the ETD web application will receive.
+The main work here is to define both the **input fields** to be sent to BookingBug when calling the appointment screen and **the callback and the response parameters** from BookingBug that the ETD web application will receive.
 
 ![High Level Flow](images/bookingbug-integration.jpg)
  
@@ -43,7 +43,7 @@ Main work here is to define both the **input fields** to be sent to BookingBug w
 
 * As communication between the ETD and BookingBug sites will be done through the Internet, **HTTPS** will be used as the communications protocol to to transfer encrypted information.
 
-* A POST request with input parameters will be sent from ETD to BookingBug site. Also, a URL callback will be provided so BookingBug site can redirect to ETD site once the booking has been completed.  
+* A POST request with input parameters will be sent from the ETD to the BookingBug site. Also, a URL callback will be provided so that the BookingBug site can redirect to the ETD site once the booking has been completed.
 
 
 ##### Description of request parameters (POST method) from ETD to BookingBug site:
