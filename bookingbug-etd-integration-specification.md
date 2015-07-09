@@ -36,7 +36,7 @@ BookingBug offer a set of UI widgets and API to perform the integration with the
 
 Main work here is to define both the **input fields** to be sent to BookingBug when calling the appointment screen and **the callback and the response parameters** from BookingBug that the ETD web application will receive.
 
-![High Level Flow](https://github.com/UKForeignOffice/emergency-travel-documents/blob/master/images/bookingbug-integration.jpg)
+![High Level Flow](images/bookingbug-integration.jpg)
  
 <a href="#protocol"></a>
 ### (4) Protocol and Format
