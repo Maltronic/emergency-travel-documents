@@ -56,11 +56,13 @@ The main work here is to define both the **input fields** to be sent to BookingB
 |-------------|-------------|-------------|-------------|-------------|
 |etdToken|ETD session token id (needed for the callback)|Alphanumeric/Text (hash)|Required|64 characters|
 |callbackURL|ETD URL to be called after the user clicks on "Next" in BookingBug appointment screen|Text|Required|256 characters|
-|postOffice|Post office selected by the user|**<span style="color:red">TBD</span>**|Required|**<span style="color:red">TBD</span>**|
+|companyID|Consular Post selected by the user|Numeric|Required|**<span style="color:red">TBD</span>**|
 |firstName|ETD applicant's first name|Text|Required|**<span style="color:red">TBD</span>**|
 |lastName|ETD applicant's last name|Text|Required|**<span style="color:red">TBD</span>**|
 |email|ETD applicant's email address|Text (xxx@yyy)|Required|**<span style="color:red">TBD</span>**|
 |contactPhoneNumber|ETD applicant's contact phone number|Text (may contain letters and symbols)|Required|**<span style="color:red">TBD</span>**|
+|etdReason|Applicant's reason to apply for an ETD|Range of predefined values ['Lost','Stolen']|Required|Predefined values|
+|feedbackOptIn|Opt-in checkbox for the user to indicate whether they permit the FCO to contact them for feedback|Boolean|Required ('Y', 'N')|1 character|
 
 ##### Description of request parameters (POST method) to ETD application (callback's parameters):
 
