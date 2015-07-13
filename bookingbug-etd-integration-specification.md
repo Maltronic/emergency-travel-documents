@@ -45,6 +45,8 @@ The main work here is to define both the **input fields** to be sent to BookingB
 
 * A POST request with input parameters will be sent from the ETD to the BookingBug site. Also, a URL callback will be provided so that the BookingBug site can redirect to the ETD site once the booking has been completed.
 
+* Initially the integration will not consider hiding the BookingBug site URL, meaning that the user will see a different URL in the browser when redirecting from the ETD to the BB site. However, this feature will be needed later on. For this to be possible (proxying through the ETD web server to the BB site), we need the BB site to always provide **relative paths**, as the ETD web server will need to rewrite all links in HTML content from BB, to allow this redirection.
+
 
 ##### Description of request parameters (POST method) from ETD to BookingBug site:
 
