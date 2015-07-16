@@ -63,7 +63,7 @@ The main work here is to define both the **input fields** to be sent to BookingB
 |lastName|ETD applicant's last name|Text|Required|**<span style="color:red">TBD</span>**|
 |email|ETD applicant's email address|Text (xxx@yyy)|Required|**<span style="color:red">TBD</span>**|
 |contactPhoneNumber|ETD applicant's contact phone number|Text (may contain letters and symbols)|Required|**<span style="color:red">TBD</span>**|
-|etdReason|Applicant's reason to apply for an ETD|Range of predefined values ['Lost','Stolen']|Required|Predefined values|
+|etdReason|Applicant's reason to apply for an ETD|List of predefined values ['Lost','Stolen']|Required|Predefined values|
 |feedbackOptIn|Opt-in checkbox for the user to indicate whether they permit the FCO to contact them for feedback|Boolean|Required ('Y', 'N')|1 character|
 
 ##### Description of request parameters (POST method) to ETD application (callback's parameters):
@@ -75,6 +75,6 @@ The main work here is to define both the **input fields** to be sent to BookingB
 |Parameter name|Description|Format|Mandation|Maximum length|
 |-------------|-------------|-------------|-------------|-------------|
 |etdToken|ETD session token id (needed for for the callback)|Alphanumeric/Text (hash)|Required|64 characters|
-|resultCode|Code which describes the result of the booking (if there's an error in the process, ETD application should control it to redirect the user to a proper error screen)|**<span style="color:red">TBD</span>**|Required|**<span style="color:red">TBD</span>**|
+|resultCode|Code which describes the result of the booking (if there's an error in the process, ETD application should control it to redirect the user to a proper error screen)|List of predefined values ['SUCCESS','FAILURE']|Required|Predefined values|
 |appointmentDate|ETD applicant's selected appointment date|Text ('dd-MM-yyyy')|Required|10 characters|
 |appointmentTime|ETD applicant's selected time slot|Text ('HH:mm')|Required|5 characters|
