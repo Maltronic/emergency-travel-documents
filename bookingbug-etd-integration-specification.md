@@ -50,31 +50,41 @@ The main work here is to define both the **input fields** to be sent to BookingB
 
 ##### Description of request parameters (POST method) from ETD to BookingBug site:
 
-* URL: https://[booking-bug-url]/slot-picker **<span style="color:red">[TBD]</span>**
+* URL: https://fco-dev.council.bookingbug.com/fco_custom_angular_booking
 * HTTP Method: POST
-* Required Headers: **<span style="color:red">[TBD]</span>**
+* Required Headers: None defined
 
 |Parameter name|Description|Format|Mandation|Maximum length|
 |-------------|-------------|-------------|-------------|-------------|
-|etdToken|ETD session token id (needed for the callback)|Alphanumeric/Text (hash)|Required|64 characters|
 |callbackURL|ETD URL to be called after the user clicks on "Next" in BookingBug appointment screen|Text|Required|256 characters|
-|companyID|Consular Post selected by the user|Numeric|Required|**<span style="color:red">TBD</span>**|
-|firstName|ETD applicant's first name|Text|Required|**<span style="color:red">TBD</span>**|
-|lastName|ETD applicant's last name|Text|Required|**<span style="color:red">TBD</span>**|
-|email|ETD applicant's email address|Text (xxx@yyy)|Required|**<span style="color:red">TBD</span>**|
-|contactPhoneNumber|ETD applicant's contact phone number|Text (may contain letters and symbols)|Required|**<span style="color:red">TBD</span>**|
-|etdReason|Applicant's reason to apply for an ETD|List of predefined values ['Lost','Stolen']|Required|Predefined values|
+|companyID|Consular Post selected by the user|Numeric|Required|5 digits|
+|firstName|ETD applicant's first name|Text|Required|35 characters|
+|lastName|ETD applicant's last name|Text|Required|35 characters|
+|email|ETD applicant's email address|Text (xxx@yyy)|Required|55 characters|
+|contactPhoneNumber|ETD applicant's contact phone number|Text (may contain letters and symbols)|Required|29 characters|
+|etdReason|Applicant's reason to apply for an ETD|['Lost','Stolen']|Required|Predefined values|
+|journeyType|Type of journey|['A single journey to the UK', 'A single journey to another destination']|Required|Predefined values|
+|dateOfBirth|ETD applicant's date of birth|Date (dd-mm-yyyy)|Required|10 characters|
+|travelDate|ETD applicant's travel date|Date (dd-mm-yyyy)|Required|10 characters|
+|countriesVisited|List of ETD applicant's visited countries|Text|Required||
+|confirmItinerary|Opt-in checkbox which confirms the applicant will bring his/her itinerary|Boolean|Required ('Y', 'N')|1 character|
+|confirmPhoto|Opt-in checkbox which confirms the applicant will bring his/her photo|Boolean|Required ('Y', 'N')|1 character|
+|termsAndConditions|Opt-in checkbox which confirms the applicant agrees on the terms and conditions|Boolean|Required ('Y', 'N')|1 character|
 |feedbackOptIn|Opt-in checkbox for the user to indicate whether they permit the FCO to contact them for feedback|Boolean|Required ('Y', 'N')|1 character|
+|policeReport|Opt-in checkbox which indicates that the applicant will bring a police report|Boolean|Required ('Y', 'N')|1 character|
+|expiredOrDamagedPassport|Expired or damaged passport|Boolean|Required ('Y', 'N')|1 character|
+|proofOfResidenceReturn|Opt-in checkbox which indicates that the applicant will bring a proof of residence (return journey)|Boolean|Required ('Y', 'N')|1 character|
+|proofOfResidenceOneWay|Opt-in checkbox which indicates that the applicant will bring a proof of residence (single journey)|Boolean|Required ('Y', 'N')|1 character|
+
 
 ##### Description of request parameters (POST method) to ETD application (callback's parameters):
 
-* URL: https://[etd-application-url]/appointment/redirect **<span style="color:red">[TBD]</span>**
+* URL: https://[etd-hostname]/application/done
 * HTTP Method: POST
-* Required Headers: **<span style="color:red">[TBD]</span>**
+* Required Headers: None defined
 
 |Parameter name|Description|Format|Mandation|Maximum length|
 |-------------|-------------|-------------|-------------|-------------|
-|etdToken|ETD session token id (needed for for the callback)|Alphanumeric/Text (hash)|Required|64 characters|
 |resultCode|Code which describes the result of the booking (if there's an error in the process, ETD application should control it to redirect the user to a proper error screen)|List of predefined values ['SUCCESS','FAILURE']|Required|Predefined values|
 |appointmentDate|ETD applicant's selected appointment date|Text ('dd-MM-yyyy')|Required|10 characters|
 |appointmentTime|ETD applicant's selected time slot|Text ('HH:mm')|Required|5 characters|
