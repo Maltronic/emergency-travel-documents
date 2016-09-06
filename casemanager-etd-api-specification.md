@@ -106,6 +106,16 @@ To push the ETD application details, the API call is as follows:
 	       		"reason" : "stolen",
 	       		"other" : ""
 	       },
+	       "representative": {
+	       		"title": "Ms",
+	       		"forenames": "Ashleigh",
+	       		"surname": "Moolman",
+	       		"dateOfBirth": "1990-01-01",
+	       		"cityOfBirth": "",
+	       		"countryOfBirth": "",
+	       		"relationshipToApplicant": ""
+	       		"applicantApplyingReason": "",
+	       },
 	       "passportDetails" : {
 	       		"passportIssuedInUK" : "y",
 	       		"countryOfIssue" : "",
@@ -254,6 +264,19 @@ To push the ETD application details, the API call is as follows:
 |homePhone|Home telephone number|Text|optional|<b>TBD</b>|
 |email|Contact email|Email Regex|optional|<b>TBD</b>|
 
+##### Representative block (behalfApplying)
+
+|Field name|Description|Format|Mandation|Maximum length|
+|-------------|-------------|-------------|-------------|-------------|
+|title|Title|[Mr, Mrs, <b>TBD</b>]|required|N/A (range of values)|
+|forenames|Forenames (first and middle names)|Text|required|<b>TBD</b>|
+|surname|Surname|Text|required|<b>TBD</b>|
+|dateofBirth|Date ('yyyy-mm-dd')|required|10|
+|cityofBirth|Place of birth (city)|Text|required|<b>TBD</b>|
+|countryofBirth|Place of birth (country)|Text|required|<b>TBD</b>|
+|relationshipToApplicant|Relationship to applicant|Text|required|(set from a pick list)|
+|applicantApplyingReason|Why are you applying on their behalf?|Text|required|(set from a pick list)|
+
 
 
 ##### Reason to apply for an ETD block (etdReason)
@@ -262,6 +285,7 @@ To push the ETD application details, the API call is as follows:
 |-------------|-------------|-------------|-------------|-------------|
 |reason|Reason to apply|['Lost','Stolen','Expired','Defaced/Damaged','Other']|required|N/A (range of values)|
 |other|Information about that other reason|Text|optional (required if 'reason' == 'Other')|<b>TBD</b>|
+
 
 ##### Passport details block (passportDetails)
 
