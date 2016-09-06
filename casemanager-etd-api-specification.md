@@ -14,11 +14,11 @@
 
 This document has been designed to define the interface between the IIZUKA Case Manager system and the ETD web form application in order to submit ETD applications to the case manager system. 
 
-This interface will be agreed and maintained by both the ETD and the IIZUKA teams. 
-
 This is a low level technical document that details the HTTP requests and responses.
 
-The canonical home of this document is as part of the github repository that contains the documentation for the ETD project. Access to this is controlled by the ETD team and can be granted on an individual basis.
+The canonical home of this document is as part of the github repository that contains the documentation for the ETD project. Access to this is controlled by the ETD team and can be granted on an individual basis. 
+
+IIZUKA have their own version of this which is also in this repository. It should be in sync. 
 
 
 <a href="#conventions"></a>
