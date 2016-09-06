@@ -114,7 +114,6 @@ To push the ETD application details, the API call is as follows:
 	       		"cityOfBirth": "",
 	       		"countryOfBirth": "",
 	       		"relationshipToApplicant": ""
-	       		"applicantApplyingReason": "",
 	       },
 	       "passportDetails" : {
 	       		"passportIssuedInUK" : "y",
@@ -275,7 +274,7 @@ To push the ETD application details, the API call is as follows:
 |cityofBirth|Place of birth (city)|Text|required|<b>TBD</b>|
 |countryofBirth|Place of birth (country)|Text|required|<b>TBD</b>|
 |relationshipToApplicant|Relationship to applicant|Text|required|(set from a pick list)|
-|applicantApplyingReason|Why are you applying on their behalf?|Text|required|(set from a pick list)|
+|applicantApplyingReason|Why are you applying on their behalf?|Text|required|*** Note that we collect this on the form but do NOT send to CASEBOOK - they don't need it. We store this information in PIWIK only *** |
 
 
 
